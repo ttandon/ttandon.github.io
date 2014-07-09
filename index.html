@@ -10,6 +10,14 @@
   <link rel="stylesheet" href="public/styles/random.css" />
 </head>
 <body style="margin:0 auto; max-width: 1300px; min-width:1300px; background-color:#fff">
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   <div class="spinnerSmall"></div>
 
   <div class="container" style="box-shadow: 1px 2px 5px #888888; margin-top:-15px">
@@ -36,6 +44,11 @@
           <h2 class="visuallyhidden" style="color:#B8BABA; margin-top:20px; font-size:23px; width:400px"><strong>Summarize</strong> anything into bullet-points and infographics.</h2>
           <button class="visuallyhidden animated fadein button-primary js-signup-trigger js-track-click-event" style="padding-top:21px; margin-top:45px; padding-right:25px; margin-right:20px;" data-event-name="homepage_splash_signup"><img src="public/images/iphone.png" style="float:left; margin-top:-10px; margin-right:17px"/>Install Clipped for iOS</button>
           <button class="visuallyhidden animated fadein button-api js-signup-trigger js-track-click-event" style="padding-top:21px; padding-right:25px; margin-right:20px; color:#a3a7ad" data-event-name="homepage_splash_signup"><img src="public/images/api.png" style="float:left; margin-top:-10px; margin-right:17px"/>Sign up for NLP API</button>
+          <div class="social" style="margin-top:50px">
+            <div style="float:left" class="fb-like" data-href="http://facebook.com/clippedapp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            <div style="margin-left:105px"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://clipped.me" data-via="clippedme" data-hashtags="summarize">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+          </div>
         </div>
         <img class="visuallyhidden macbook" src="public/images/clippedwow5.png" style="float:right; margin-top:-140px; width:600px"/>
       </section>
