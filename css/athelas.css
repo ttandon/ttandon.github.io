@@ -54,17 +54,24 @@ img.logo {
 button {
     cursor: pointer;
     border: none;
-    height: 50px;
+    height: 40px;
+    border-radius: 20px;
     width: 200px;
     outline: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 button.comingsoon {
-    background: url('/media/comingsoon.png') no-repeat;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
 }
 
 button.contact {
-    background: url('/media/contact.png') no-repeat;
+    background: #3ab2f7;
 }
 
 form.contact {
