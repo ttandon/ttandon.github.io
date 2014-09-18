@@ -70,8 +70,17 @@ button.comingsoon {
     border-radius: 20px;
 }
 
+button.comingsoon:hover {
+    color: rgba(255, 255, 255, 1.0);
+    border: 2px solid rgba(255, 255, 255, 1.0);
+}
+
 button.contact {
     background: #3ab2f7;
+}
+
+button.contact:hover {
+    background: #339cd9;
 }
 
 form.contact {
