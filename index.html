@@ -1,43 +1,131 @@
 <!doctype html>
-<html lang="en">
 
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Athelas - Intelligence for your Health.</title>
+
+  <title>Athelas</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=1000px;" />
+  <title>Athelas</title>
+  <meta name="description" content="In-home blood diagnostic" />
+  <meta name="keywords" content="diagnostic, blood, in-home" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <STYLE>
+	a{text-decoration:none}
+  *{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow:none;
+  text-rendering: optimizeLegibility;
+  }
+  </STYLE>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
-<body style="margin: 0px; padding: 0px; font-family: Helvetica; font-weight:100; min-width:1200px; margin:0 auto;">
-  <div class="shadow-container" style="margin-top:0px">
-    <div class="maintop container-fluid" style="background-image: url('athelasbackground.png'); height:500px;">
-      <div class="container" style="width:1000px; margin: 0 auto; padding-top:130px; padding-left:20px">
-        <img src="athelaslogo.png" style="height:70px;"/>
-        <br>
-        <br>
-        <br>
-        <div style="color:#fff; font-size:18px; font-family:'Helvetica Neue'; font-weight:200">Groundbreaking <strong>Artificial Intelligence</strong> to analyze your health. Powered by your smartphone.</div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <form action="mailto:athelas@mit.edu">
-          <button style="background:url(comingsoonbutton.png) no-repeat;cursor:pointer;border:none;height:50px;width:200px;outline:none;"></button>
-        </form>
-      </div>
-    </div>
-    <div class="container-fluid" style="width:1000px; margin: 0 auto; padding-top:50px; margin-bottom:00px">
-        <center>
-          <span style="font-size:28px; color:#7c7a7a; font-weight:100">Medical diagnostics are ripe for disruption.</span>
-          <br>
-          <br>
-          <span style="color:#9c9b9b;">For the past 150 years, blood diagnostics have hardly changed. Blood tests are used to diagnose and identify over 20,000 of mankind’s deadliest diseases, and yet the process still remains costly and highly cumbersome. Athelas aims to change that - we’re working on a computer vision based solution that allows for cell analysis and identification on your smartphone. </span>
-          <br>
-          <br>
-          <form action="mailto:athelas@mit.edu" style="padding-bottom:80px">
-            <button style="background:url(contactus.png) no-repeat;cursor:pointer;border:none;height:50px;width:200px;outline:none;"></button>
-          </form>
-        </center>
+
+<body style="margin:0; min-width:1200px;">
+  <script src=""></script>
+  <div class="container demo-1" style="width:100%">
+    <canvas id="demo-canvas" style="position:absolute; margin-top:-80px; z-index:-1000"></canvas>
+    <div class="header-region" style="width:1200px; height: 500px; margin: 0 auto; margin-top:80px">
+      <div class="large-header">
+      	<img src="logo.png" style="height:12px; float:left; margin-right:500px;"\>
+      	<div class="nav" style="font-family:'Avenir Next'; font-size:14px; color:#7e8182;">
+      		<a href="/technology" style="padding-right:35px; color:#7e8182">Technology</a>
+          <a href="/manifesto" style="padding-right:35px; color:#7e8182">Manifesto</a>
+          <a href="/data" style="padding-right:35px; color:#7e8182">Data</a>
+          <a href="/fda" style="padding-right:35px; color:#7e8182">FDA</a>
+      		<a href="mailto:deploy@getathelas.com?subject=Athelas Deployment" class="rounded" style="border: 2px solid #59cee7; border-radius:20px; padding-left:10px; padding-right:10px; padding-top:5px; padding-bottom:5px; color:#59cee7;">
+      			Deploy in your Hospital
+      		</a>
+      	</div>
+      	<div class="text-section" style="padding-top:100px">
+      		<h4 style="font-family:'Avenir Next'; font-size:25px; font-weight:400;">Introducing Athelas.</h4>
+      		<h5 style="font-family:'Avenir Next'; color:#adafb0; font-size:18px; font-weight:400; width:520px; float:left; margin-top:-10px;">Deep Learning technology that analyzes a drop of blood in seconds. <span style="font-weight:500">Meet the next frontier of diagnostics.</span></h5>
+      		<img src="athelasshot2.png" style="width:600px;margin-left:620px;margin-top:-230px;"/>
+      		<div style="margin-top:-200px;">
+    	  		<a href="mailto:deploy@getathelas.com?subject=Athelas Deployment" class="button1" style="float:left; margin-right:25px; font-family:'Avenir Next';border: 2px solid #31a6e3; background-color: #31a6e3; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:8px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Deploy in your Hospital</a>
+    	  		<a href="mailto:deploy@getathelas.com?subject=Preorder" class="button1" style="float:left; margin-right:25px; font-family:'Avenir Next';border: 2px solid #aeb5b7; background-color: #aeb5b7; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:7px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Sign up for Pre-order</a>
+    	    </div>
+          <div class="fdasection" style="font-family:'Avenir Next';font-size:12px;font-weight:400;margin-top:80px;color:#848383;">
+            Currently deploying in clinics around world (FDA IDE): <a href="mailto:deploy@getathelas.com" style="color:#329ad9;">Deploy in yours.</a>
+            </br>
+            <strong>FDA 510k</strong>: Anticipated approval end of 2016
+          </div>
+        </div>
+    	</div>
     </div>
   </div>
+  <div style="width:100%;background-color:#fff;height:600px;position:absolute;z-index:-101">
+  </div>
+  <img src="prickbackground.png" style="position:absolute;z-index:-100"/>
+  <div class="explain1" style="width:100%; background: rgba(23,59,104,0.4); height:600px;margin-top:-30px;">
+    <div class="text-container" style="width:1000px;margin:0 auto">
+      <h4 style="font-family:'Avenir Next';font-size:22px; font-weight:400;color:#fff;width:600px;padding-top:125px">One drop of blood. 7 seconds.</h4>
+      <p style="font-family:'Avenir Next'; font-size:20px; font-weight:400;color:#fff;width:600px;margin-top:-30px;font-weight:500">A Complete Blood Count (CBC) on your phone.</p>
+      <div class="paragraphexplain" style="float:left">
+        <p style="font-family:'Avenir Next'; font-size:16px; font-weight:400;color:#fff;width:600px;margin-top:30px">Prick a finger with a regular lancet. Hold the finger against an Athelas micro-strip and insert the strip into the portable device. A few seconds later a <span style="font-weight:600">lab-grade blood report</span> will appear on your phone - capable of diagnosing flu, infection, and even Leukemia within seconds through a blood count.</p>
+        <p style="font-family:'Avenir Next'; font-size:16px; font-weight:400;color:#fff;width:600px;margin-top:30px;margin-bottom:60px">Our technology is <span style="font-weight:600">rigorously lab validated</span> and being deployed in hospitals and homes accross the country. See our publically released data <span style="font-weight:600">here.</span></p>
+        <a href="mailto:tanay@getathelas.com?subject=Athelas Demo" class="rounded" style="border: 2px solid #fff; border-radius:20px; padding-left:13px; padding-right:13px; padding-top:7px; padding-bottom:7px; color:#fff; font-weight:600; font-size:13px;">
+            Ask for a Demo today
+        </a>
+      </div>
+       <img src="athelasshot.png" style="margin:0 auto;width:350px;margin-top:54px;margin-left:20px"/>
+    </div>
+  </div>
+  <div class="explain2" style="width:100%; background-color:#fff; height:766px;">
+    <div class="text-container" style="width:1000px;margin:0 auto">
+      <h4 style="font-family:'Avenir Next'; font-size:28px; font-weight:400;color:#464647;width:600px;margin:0 auto;padding-top:65px">Bring Athelas into your hospital or clinic <span style="font-weight:500">today.</span></h4>
+      <p style="font-family:'Avenir Next'; font-size:18px;color:#878889;font-weight:400;color:#;width:900px; margin:0 auto;margin-top:30px">Point of Care (PoC) diagnostics are the future of health care - rapidly assess a patient inside a doctor's office, during wait time, or even in-home. With Athelas, determine the status of a patient's immune system within seconds to identify potential infection or disease at the prick of a finger.</p>
+      
+      <center>
+      <div style="margin-top:50px">
+        <a href="mailto:deploy@getathelas.com?subject=Athelas Deployment" class="button1" style="margin-right:25px; font-family:'Avenir Next';border: 2px solid #31a6e3; background-color: #31a6e3; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:8px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Deploy in your Hospital</a>
+        <a href="mailto:deploy@getathelas.com?subject=Preorder" class="button1" style="margin-right:25px; font-family:'Avenir Next';border: 2px solid #aeb5b7; background-color: #aeb5b7; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:7px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Sign up for Pre-order</a>
+      </div>
+      <img src="headerpic2.png" style="width:300px;margin-top:33px;"/>
+      </center>
+    </div>
+  </div>
+  <div class="press-section" style="width:100%;height:80px;background-color:#595656;margin-top:-102px">
+    <p style="color:#fff;padding-top:15px;margin-left:35px;float:left;">Press</p>
+    <div class="press-images" style="width:300px;margin: 0 auto;padding-top:25px">
+      <img src="bbc.png" style="height:30px;margin-right:55px"/>
+      <img src="tnw.png" style="height:30px;margin-right:55px"/>
+      <img src="cnbc.png" style="height:30px"/>
+    </div>
+  </div>
+  <div class="partners" style="width:1000px;margin:0 auto;margin-bottom:50px">
+    <h2 style="font-family:'Avenir Next'; font-size:25px; font-weight:400;padding-top:20px;margin-bottom:50px">Our Partners and Investors</h2>
+    <img src="femap.png" style="float:left;height:80px;margin-top:-20px;margin-left:50px"/>
+    <img src="yclogo.gif" style="float:left;height:40px;margin-left:80px;"/>
+    <img src="uscstevens.jpeg" style="float:left;height:80px;margin-left:80px;margin-top:-20px"/>
+    <img src="cardinal.png" style="height:80px;margin-left:80px;margin-top:-25px"/>
+  </div>
+  <div class="nav" style="font-family:'Avenir Next'; font-size:14px; color:#7e8182;width:600px;margin:0 auto; margin-top:100px;margin-bottom:100px">
+          <a href="/technology" style="padding-right:35px; color:#7e8182">Technology</a>
+          <a href="/fda" style="padding-right:35px; color:#7e8182">FDA</a>
+          <a href="/team" style="padding-right:35px; color:#7e8182">Team</a>
+          <a href="/manifesto" style="padding-right:35px; color:#7e8182">Manifesto</a>
+          <a href="mailto:deploy@getathelas.com?subject=Athelas Deployment" class="rounded" style="border: 2px solid #59cee7; border-radius:20px; padding-left:10px; padding-right:10px; padding-top:5px; padding-bottom:5px; color:#59cee7;">
+            Deploy in your Hospital
+         </a>
+  </div>
+  <script src="js/TweenLite.min.js"></script>
+  <script src="js/EasePack.min.js"></script>
+  <script src="js/rAF.js"></script>
+  <script src="js/demo-1.js"></script>
 </body>
 </html>
