@@ -1,29 +1,15 @@
 body {
   font-family: "calibri";
-  background: #efefef;
-  padding: 32px;
-  padding-top: 16px;
+  background: #dcdcdc;
+  width: 100%;
+  margin: 0;
   color: #333;
+  min-width: 1200px;
 }
 h1,
 h3 {
   text-align: center;
   color: #787878;
-}
-#movieName {
-  width: 98%;
-  padding: 9px;
-  font-size: 16px;
-}
-.style-1 input[type="text"] {
-  padding: 10px;
-  border: solid 1px #dcdcdc;
-  transition: box-shadow 0.3s, border 0.3s;
-}
-.style-1 input[type="text"]:focus,
-.style-1 input[type="text"].focus {
-  border: solid 1px #707070;
-  box-shadow: 0 0 5px 1px #969696;
 }
 a {
   text-decoration: none;
@@ -34,27 +20,29 @@ a {
   text-shadow: none;
   text-rendering: optimizeLegibility;
 }
-#hor-minimalist-b {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  font-size: 12px;
-  background: #fff;
-  margin: 45px;
-  width: 480px;
-  border-collapse: collapse;
-  text-align: left;
+.logo img {
+  height: 40px;
+  float: left;
+  margin-top: 30px;
+  margin-right: 350px;
+  padding-left: 100px;
 }
-#hor-minimalist-b th {
+.nav {
+  font-family: 'Avenir Next';
   font-size: 14px;
-  font-weight: normal;
-  color: #039;
-  padding: 10px 8px;
-  border-bottom: 2px solid #6678b1;
+  padding-top: 44px;
+  color: #7e8182;
 }
-#hor-minimalist-b td {
-  border-bottom: 1px solid #ccc;
-  color: #669;
-  padding: 6px 8px;
+.nav a {
+  padding-right: 35px;
+  color: #7e8182;
 }
-#hor-minimalist-b tbody tr hover td {
-  color: #009;
+.nav a.rounded {
+  border: 2px solid #59cee7;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #59cee7;
 }
