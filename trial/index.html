@@ -55,55 +55,39 @@
 </head>
 
 <body>
-<div class="container">
-  <nav>
-    <a class="logo" href="../index.html"><img src="../img/logo.png"\></a>
-    <div class="links">
-      <a href="../technology/index.html">Technology</a>
-      <a href="../manifesto/index.html">Manifesto</a>
-      <a href="../data/index.html">Data</a>
-      <a href="../fda/index.html">FDA</a>
-      <a href="../contact/index.html">Contact Us</a>
-      <a href="../trial/index.html" class="rounded">Get Device $99.</a>
-    </div>
-  </nav>
-  <div style="width:1200px; margin:0 auto;background-color:#fff;height:">
-    <div class="block" style="margin-left:200px">
-    <p style="position:relative;z-index:2;font-family:'Avenir';color:#5d5d5d;float:left;font-size:22px; font-weight:100; margin-top:0px">Athelas with 10 test strips</p>
-    <p style="font-family:'Avenir';color:#5d5d5d; font-size:22px; font-weight:100; margin-top:100px;margin-left:600px"><strong>$99</strong></p>
-    <img src="../img/athelasmainwhite.png" style="width:900px;margin-left:-100px"/>
-    <p style="position:relative;z-index:2;font-family:'Avenir';color:#5d5d5d;float:left;font-size:16px; font-weight:100; width:800px">To join trial fill out form below. We'll be in touch with remaining information to order. We have a small number of devices to deploy in this batch, so spots may fill out quickly.</p>
-    <p style="position:relative;z-index:2;font-family:'Avenir';color:#5d5d5d;float:left;font-size:16px; font-weight:100; width:800px">This first shipment of devices is discounted from the final market price, with 24 hour free support (since it is a trial), so joining now has benefits.</p>
+  <div class="container">
+    <nav>
+      <a class="logo" href="../index.html"><img src="../img/logo.png"\></a>
+      <div class="links">
+        <a href="../technology/index.html">Technology</a>
+        <a href="../manifesto/index.html">Manifesto</a>
+        <a href="../data/index.html">Data</a>
+        <a href="../fda/index.html">FDA</a>
+        <!-- <a href="../contact/index.html">Contact Us</a> -->
+        <a href="../trial/index.html" class="rounded">Get Device $99.</a>
+      </div>
+    </nav>
 
-    <div class="contact" style="margin-top:200px">
-    <h2 class="contact-title" style="font-family:'Avenir'">Get Device.</h2>
-    <p id="contact-success" class="text-success lead"></p>
-    <p id="contact-error" class="text-danger lead"></p>
-        <p style="font-family:'Avenir'">Full Name</p>
-        <input class="form-control" style="" name="name" id="name" type="text" placeholder="Full Name. eg., Joe" required>
-        <br>
-        <br>
-        <p style="font-family:'Avenir'">Email</p>
-        <input class="form-control" name="email" style="" id="email" type="email" placeholder="Your email. eg., joe@acme.com" required>
-        <br>
-        <br>
-        <p style="font-family:'Avenir'">What is your immune condition?</p>
-        <input class="form-control" style="" type="message" id="message" name="message" placeholder="Immune Condition" rows="1" required></input>
-        <br>
-        <p style="font-family:'Avenir'; font-size:15px; width:350px; color:#adadad">Submitting below means you intend to purchase a device for $99. Ships within 20 days. Payment collected securely later (after we contact to confirm your spot in the trial).</p>
-        <br />
-        <button class="btn btn-success pull-right" id="send-button" onclick="onhitbutton();" >Join</button>
-    </form>
+    <div class="getAthelas">
+      <h3>Athelas with 10 test strips <strong>$99</strong></h3>
+      <img src="../img/athelasmainwhite.png"/>
+      <p>To join trial fill out form below. We'll be in touch with remaining information to order. We have a small number of devices to deploy in this batch, so spots may fill out quickly.</p>
+      <p>This first shipment of devices is discounted from the final market price, with 24 hour free support (since it is a trial), so joining now has benefits.</p>
     </div>
-    <!--<p style="position:relative;z-index:2;font-family:'Avenir'; color:#c2c2c2; font-size:19px; font-weight:100; margin-top:-15px; margin-bottom:50px;">Monitor White Blood Cell Counts at Home. <span style="color:#28c8f6">Clinically Validated</span></p>
-    <a href="mailto:deploy@getathelas.com?subject=Athelas Deployment" class="button1" style="z-index:2;position:relative;margin-right:25px; font-family:'Avenir Next';border: 2px solid #31a6e3; background-color: #31a6e3; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:8px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Join Trial</a>
 
-    <a href="mailto:deploy@getathelas.com?subject=Preorder" class="button1" style="z-index:2; position:relative;margin-right:25px; font-family:'Avenir Next';border: 2px solid #aeb5b7; background-color: #aeb5b7; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:7px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Learn More</a>
-
-    <p style="position:relative;z-index:2;font-family:'Avenir'; color:#c2c2c2; font-size:15px; margin-top:55px; font-weight:100;">Ships in under 20 days. <strong>FDA Class 1 Regulated.</strong> 541 devices left in trial.</p>
+    <div class="form">
+      <h2>Get Device.</h2>
+      <form action="">
+        <div class="grouping">
+          <div class="input col-1"><input id="name" type="text" name="name" value="" required><span class="highlight"></span><span class="bar"></span><label for="name">Name</label></div>
+          <div class="input col-1"><input id="email" type="text" name="email" value="" required><span class="highlight"></span><span class="bar"></span><label for="email">Email</label></div>
+          <div class="input col-2"><input id="message" type="text" name="message" value="" required><span class="highlight"></span><span class="bar"></span><label for="message">What is your immune condition?</label></div>
+        </div>
+        <p>Submitting below means you intend to purchase a device for $99. Ships within 20 days. Payment collected securely later (after we contact to confirm your spot in the trial).</p>
+        <button type="submit"  id="send-button" onclick="onhitbutton();">Join</button>
+      </form>
     </div>
-    -->
-  <!-- </div> -->
+
     <footer class="nav">
       <center class="links">
         <a href="../technology/index.html">Technology</a>

@@ -15,89 +15,72 @@
     <link rel="stylesheet" type="text/css" href="../css/app.css" />
     <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-36491460-2', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-36491460-2', 'auto');
+    ga('send', 'pageview');
 
-  </script>
+    </script>
 
-  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 
-  <script type="text/javascript">
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("3365830889");
-  </script>
+    <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+        heap.load("3365830889");
+    </script>
 
-  <script>
-    // Send message
-    var myFirebaseRef = new Firebase("https://athelas-signup.firebaseio.com/");
-    function change(){
-      window.location = "index.html";
-    }
-    function onhitbutton(){
-        myFirebaseRef.push({
-      name: String(document.getElementById('name').value),
-      email: String(document.getElementById('email').value),
-      immuno: String(document.getElementById('message').value)
-      }, change());
-    }
-  </script>
+    <script>
+      // Send message
+      var myFirebaseRef = new Firebase("https://athelas-signup.firebaseio.com/");
+      function change(){
+        window.location = "index.html";
+      }
+      function onhitbutton(){
+          myFirebaseRef.push({
+        name: String(document.getElementById('name').value),
+        email: String(document.getElementById('email').value),
+        immuno: String(document.getElementById('message').value)
+        }, change());
+      }
+    </script>
 
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <div class="container">
-  <nav>
-    <a class="logo" href="../index.html"><img src="../img/logo.png"\></a>
-    <div class="links">
-      <a href="../technology/index.html">Technology</a>
-      <a href="../manifesto/index.html">Manifesto</a>
-      <a href="../data/index.html">Data</a>
-      <a href="../fda/index.html">FDA</a>
-      <a href="../contact/index.html">Contact Us</a>
-      <a href="../trial/index.html" class="rounded">Get Device $99.</a>
+  <body>
+    <div class="container">
+      <nav>
+        <a class="logo" href="../index.html"><img src="../img/logo.png"\></a>
+        <div class="links">
+          <a href="../technology/index.html">Technology</a>
+          <a href="../manifesto/index.html">Manifesto</a>
+          <a href="../data/index.html">Data</a>
+          <a href="../fda/index.html">FDA</a>
+          <a href="../contact/index.html">Contact Us</a>
+          <a href="../trial/index.html" class="rounded">Get Device $99.</a>
+        </div>
+      </nav>
+
+      <section class="band thanks">
+        <p>Thanks! We'll be in touch.</p>
+      </section>
+
+      <footer class="nav">
+        <center class="links">
+          <a href="../technology/index.html">Technology</a>
+          <a href="../manifesto/index.html">Manifesto</a>
+          <a href="../data/index.html">Data</a>
+          <a href="../fda/index.html">FDA</a>
+          <a href="../contact/index.html">Contact Us</a>
+          <a href="../trial/index.html" class="rounded">Get Device $99.</a>
+        </center>
+      </footer>
     </div>
-  </nav>
-  <section class="band">
-    <p>Technology</p>
-  </section>
-  <div style="width:1200px; margin:0 auto;background-color:#fff;height:">
-    <div style="padding-top:40px"></div>
-    <div style="width:1200px;background-color:#61b5f0;height:300px">
-      <p style="position:relative;z-index:2;font-family:'Avenir';color:#fff;float:left;font-size:22px; font-weight:100; margin-top:200px;margin-left:150px">Thanks! We'll be in touch.</p>
-    </div>
-
-    <!--content region-->
-    <div style="margin-left:200px;margin-top:50px;font-family:'Avenir';width:800px;height:200px;background-color:#fff">
-    </div>
-
-    <!--<p style="position:relative;z-index:2;font-family:'Avenir'; color:#c2c2c2; font-size:19px; font-weight:100; margin-top:-15px; margin-bottom:50px;">Monitor White Blood Cell Counts at Home. <span style="color:#28c8f6">Clinically Validated</span></p>
-    <a href="mailto:deploy@getathelas.com?subject=Athelas Deployment" class="button1" style="z-index:2;position:relative;margin-right:25px; font-family:'Avenir Next';border: 2px solid #31a6e3; background-color: #31a6e3; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:8px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Join Trial</a>
-
-    <a href="mailto:deploy@getathelas.com?subject=Preorder" class="button1" style="z-index:2; position:relative;margin-right:25px; font-family:'Avenir Next';border: 2px solid #aeb5b7; background-color: #aeb5b7; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:7px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Learn More</a>
-
-    <p style="position:relative;z-index:2;font-family:'Avenir'; color:#c2c2c2; font-size:15px; margin-top:55px; font-weight:100;">Ships in under 20 days. <strong>FDA Class 1 Regulated.</strong> 541 devices left in trial.</p>
-    </div>
-    -->
-  </div>
-    <footer class="nav">
-      <center class="links">
-        <a href="../technology/index.html">Technology</a>
-        <a href="../manifesto/index.html">Manifesto</a>
-        <a href="../data/index.html">Data</a>
-        <a href="../fda/index.html">FDA</a>
-        <a href="../contact/index.html">Contact Us</a>
-        <a href="../trial/index.html" class="rounded">Get Device $99.</a>
-      </center>
-    </footer>
-  </div>
-</body>
+  </body>
 </html>

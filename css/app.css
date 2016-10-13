@@ -28,6 +28,12 @@ nav .links {
   margin-right: 40px;
   float: right;
 }
+nav .links a {
+  outline: none;
+}
+nav .links a:focus {
+  border-bottom: 3px solid #59cee7;
+}
 nav,
 footer {
   width: 100%;
@@ -43,6 +49,7 @@ nav .logo,
 footer .logo {
   float: left;
   width: auto;
+  outline: none;
 }
 nav .logo img,
 footer .logo img {
@@ -54,8 +61,9 @@ footer .logo img {
 }
 nav .links a,
 footer .links a {
-  padding-right: 35px;
+  margin-right: 25px;
   color: #7e8182;
+  padding: 0 5px;
 }
 nav .links a.rounded,
 footer .links a.rounded {
@@ -66,6 +74,14 @@ footer .links a.rounded {
   padding-top: 5px;
   padding-bottom: 5px;
   color: #59cee7;
+  transition: all ease-in-out 0.2s;
+}
+nav .links a.rounded:hover,
+footer .links a.rounded:hover,
+nav .links a.rounded:focus,
+footer .links a.rounded:focus {
+  background: #59cee7;
+  color: #fff;
 }
 .container {
   max-width: 1200px;
@@ -98,6 +114,9 @@ section.band.fda {
 section.band.contact {
   background: #e16d64;
 }
+section.band.thanks {
+  background: #61b5f0;
+}
 section.band p {
   position: relative;
   z-index: 2;
@@ -106,20 +125,195 @@ section.band p {
   float: left;
   font-size: 22px;
   font-weight: 100;
-  margin-top: 200px;
-  margin-left: 150px;
+  margin: 200px 0 0 150px;
+}
+.getAthelas {
+  width: 800px;
+  padding-top: 70px;
+  display: block;
+  margin: auto;
+}
+.getAthelas * {
+  color: #5d5d5d;
+  font-family: 'Avenir';
+  font-weight: 100;
+}
+.getAthelas img {
+  width: 100%;
+}
+.getAthelas h3 {
+  font-size: 22px;
+  text-align: left;
+  width: 100%;
+}
+.getAthelas h3 strong {
+  float: right;
+  font-weight: bold;
+}
+.getAthelas p {
+  font-size: 18px;
+}
+.form {
+  display: table;
+  width: 600px;
+  margin: 30px auto 0;
+}
+.form h2,
+.form p {
+  font-family: "Avenir";
+}
+.form p {
+  display: inline-block;
+  margin: 40px 10px;
+  font-size: 18px;
+  width: 100%;
+  color: #adadad;
+}
+.form button {
+  background: transparent;
+  color: #59cee7;
+  cursor: pointer;
+  border: 2px solid #59cee7;
+  padding: 10px 25px;
+  border-radius: 23px;
+  font-size: 20px;
+  transition: all ease-in-out 0.2s;
+  outline: none;
+}
+.form button:hover,
+.form button:focus {
+  background: #59cee7;
+  color: #fff;
 }
 .content {
   max-width: 800px;
-  margin-left: 200px;
+  margin: auto;
   margin-top: 50px;
   font-family: 'Avenir';
   width: 800px;
 }
 footer {
-  margin-top: 50px;
+  margin-top: 200px;
   margin-bottom: 70px;
 }
-footer .nav {
-  padding-top: 0;
+#hor-minimalist-b {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;
+  background: #fff;
+  margin: 45px;
+  width: 480px;
+  border-collapse: collapse;
+  text-align: left;
+}
+#hor-minimalist-b th {
+  font-size: 14px;
+  font-weight: normal;
+  color: #039;
+  padding: 10px 8px;
+  border-bottom: 2px solid #6678b1;
+}
+#hor-minimalist-b td {
+  border-bottom: 1px solid #ccc;
+  color: #669;
+  padding: 6px 8px;
+}
+#hor-minimalist-b tbody tr:hover td {
+  color: #009;
+}
+.grouping {
+  width: 600px;
+  float: left;
+}
+.grouping .input {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  margin-top: 35px;
+  float: left;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.grouping .input.col-1 {
+  width: 50%;
+}
+.grouping .input.col-1:nth-of-type(n) {
+  padding-right: 11px;
+}
+.grouping .input.col-1:nth-of-type(2n) {
+  padding-left: 11px;
+}
+.grouping .input.col-1:nth-of-type(2n) label {
+  left: 20px;
+}
+.grouping .input input {
+  box-sizing: border-box;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 11px;
+  min-height: 32px;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  padding: 0 10px 10px 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e5e5e6;
+}
+.grouping .input input:focus {
+  outline: none;
+}
+.grouping .input input:focus ~ .bar:before,
+.grouping .input input:focus ~ .bar:after {
+  width: 50%;
+}
+.grouping .input input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+.grouping .input input:focus ~ label {
+  top: -11px;
+  font-size: 12px;
+  font-weight: 200;
+  color: #000;
+}
+.grouping .input label {
+  color: #a9a9a9;
+  font-size: 18px;
+  font-weight: 100;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 5px;
+  transition: 0.2s ease all;
+}
+.grouping .input .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.grouping .input .bar:before,
+.grouping .input .bar:after {
+  content: '';
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #59cee7;
+  transition: 0.2s ease all;
+}
+.grouping .input .bar:before {
+  left: 50%;
+}
+.grouping .input .bar:after {
+  right: 50%;
+}
+.grouping .input .bar .highlight {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  top: 12px;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
