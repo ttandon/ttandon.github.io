@@ -20,24 +20,45 @@ a {
   text-shadow: none;
   text-rendering: optimizeLegibility;
 }
-.logo img {
-  height: 40px;
-  float: left;
-  margin-top: 30px;
-  margin-right: 350px;
-  padding-left: 100px;
+nav {
+  padding-top: 44px;
 }
-.nav {
+nav .links {
+  padding-top: 0;
+  margin-right: 40px;
+  float: right;
+}
+nav,
+footer {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  margin: auto;
+  display: table;
   font-family: 'Avenir Next';
   font-size: 14px;
-  padding-top: 44px;
   color: #7e8182;
 }
-.nav a {
+nav .logo,
+footer .logo {
+  float: left;
+  width: auto;
+}
+nav .logo img,
+footer .logo img {
+  margin-right: 0 !important;
+  height: 40px;
+  float: left;
+  margin-top: -10px;
+  padding-left: 100px;
+}
+nav .links a,
+footer .links a {
   padding-right: 35px;
   color: #7e8182;
 }
-.nav a.rounded {
+nav .links a.rounded,
+footer .links a.rounded {
   border: 2px solid #59cee7;
   border-radius: 20px;
   padding-left: 10px;
@@ -45,4 +66,60 @@ a {
   padding-top: 5px;
   padding-bottom: 5px;
   color: #59cee7;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  background: #fff;
+  display: table;
+  margin: auto;
+}
+section {
+  display: table;
+  width: 1200px;
+  margin: 0 auto;
+}
+section.band {
+  height: 300px;
+  margin-top: 40px;
+}
+section.band.technology {
+  background: #19b9db;
+}
+section.band.manifesto {
+  background: #ef8324;
+}
+section.band.data {
+  background: #397624;
+}
+section.band.fda {
+  background: #264483;
+}
+section.band.contact {
+  background: #e16d64;
+}
+section.band p {
+  position: relative;
+  z-index: 2;
+  font-family: 'Avenir';
+  color: #fff;
+  float: left;
+  font-size: 22px;
+  font-weight: 100;
+  margin-top: 200px;
+  margin-left: 150px;
+}
+.content {
+  max-width: 800px;
+  margin-left: 200px;
+  margin-top: 50px;
+  font-family: 'Avenir';
+  width: 800px;
+}
+footer {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+footer .nav {
+  padding-top: 0;
 }

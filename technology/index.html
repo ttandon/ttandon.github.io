@@ -1,105 +1,92 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
+    <title>Athelas</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=1000px;" /> -->
+    <meta name="description" content="In-home blood diagnostic" />
+    <meta name="keywords" content="diagnostic, blood, in-home" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/demo.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  <title>Athelas</title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=1000px;" />
-  <meta name="description" content="In-home blood diagnostic" />
-  <meta name="keywords" content="diagnostic, blood, in-home" />
-  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="css/demo.css" />
-  <link rel="stylesheet" type="text/css" href="css/component.css" />
-  <link rel="stylesheet" type="text/css" href="../css/app.css" />
-<link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-36491460-2', 'auto');
+      ga('send', 'pageview');
+    </script>
 
-  ga('create', 'UA-36491460-2', 'auto');
-  ga('send', 'pageview');
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 
-  </script>
+    <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+        heap.load("3365830889");
+    </script>
 
-  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script>
+        // Send message
+        var myFirebaseRef = new Firebase("https://athelas-signup.firebaseio.com/");
+        function change(){
+          window.location = "index.html";
+        }
+        function onhitbutton(){
+            myFirebaseRef.push({
+          name: String(document.getElementById('name').value),
+          email: String(document.getElementById('email').value),
+          immuno: String(document.getElementById('message').value)
+          }, change());
+        }
+    </script>
 
-  <script type="text/javascript">
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("3365830889");
-</script>
-
-  <script>
-    // Send message
-    var myFirebaseRef = new Firebase("https://athelas-signup.firebaseio.com/");
-    function change(){
-      window.location = "index.html";
-    }
-    function onhitbutton(){
-        myFirebaseRef.push({
-      name: String(document.getElementById('name').value),
-      email: String(document.getElementById('email').value),
-      immuno: String(document.getElementById('message').value)
-      }, change());
-    }
-</script>
-  </script>
-
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
 
 <body>
-  <div style="width:1200px; margin:0 auto;background-color:#fff;height:">
-    <a class="logo" href="../index.html"><img src="../img/logo.png"\></a>
-    <div class="nav">
-        <a href="technology/index.html">Technology</a>
-        <a href="manifesto/index.html">Manifesto</a>
-        <a href="data/index.html">Data</a>
-        <a href="fda/index.html">FDA</a>
-        <a href="contact/index.html">Contact Us</a>
-        <a href="trial/index.html" class="rounded">Get Device $99.</a>
-    </div>
-    <div style="padding-top:40px"></div>
-    <div style="width:1200px;background-color:#19b9db;height:300px">
-      <p style="position:relative;z-index:2;font-family:'Avenir';color:#fff;float:left;font-size:22px; font-weight:100; margin-top:200px;margin-left:150px">Technology</p>
-    </div>
+  <div class="container">
+    <nav>
+      <a class="logo" href="../index.html"><img src="../img/logo.png"\></a>
+      <div class="links">
+        <a href="../technology/index.html">Technology</a>
+        <a href="../manifesto/index.html">Manifesto</a>
+        <a href="../data/index.html">Data</a>
+        <a href="../fda/index.html">FDA</a>
+        <a href="../contact/index.html">Contact Us</a>
+        <a href="../trial/index.html" class="rounded">Get Device $99.</a>
+      </div>
+    </nav>
 
-    <!--content region-->
-    <div style="margin-left:200px;margin-top:50px;font-family:'Avenir';width:800px;height:800px;background-color:#fff">
+    <section class="band technology">
+      <p>Technology</p>
+    </section>
+
+    <div class="content">
       <p>Athelas is built on deep learning technology that uses vision to rapidly analyze blood cells and generate diagnostic reports. Because we utilize machine vision instead of traditional coulter counting or flow based techniques we're able to maintain a high degree of precision on drop samples; performing with greater accuracy than other existing tech.</p>
       <p>Our team is comprised of deep learning and biotech researchers, and we have an inherent focus on bringing cutting edge techniques into the hands of consumers.</p>
       <img src="../img/athelasexplain.jpg"/>
       <p>Blood Cell counts enable a rapid analysis of a patient's various immune, hematological, and general conditions. Our first product is targeted at immunocompromised patients who aim to monitor their White Blood Cell counts at home, to better determine when necessary to visit a doctor if concern. WBCs offer unique insight as to this - indicating anything from inflammatory response, all the way to Leukemia based on cell count ranges.</p>
     </div>
 
-    <!--<p style="position:relative;z-index:2;font-family:'Avenir'; color:#c2c2c2; font-size:19px; font-weight:100; margin-top:-15px; margin-bottom:50px;">Monitor White Blood Cell Counts at Home. <span style="color:#28c8f6">Clinically Validated</span></p>
-    <a href="mailto:deploy@getathelas.com?subject=Athelas Deployment" class="button1" style="z-index:2;position:relative;margin-right:25px; font-family:'Avenir Next';border: 2px solid #31a6e3; background-color: #31a6e3; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:8px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Join Trial</a>
-
-    <a href="mailto:deploy@getathelas.com?subject=Preorder" class="button1" style="z-index:2; position:relative;margin-right:25px; font-family:'Avenir Next';border: 2px solid #aeb5b7; background-color: #aeb5b7; border-radius:10px; padding-left:20px; padding-right:20px; padding-top:7px; padding-bottom:7px; color:#fff; font-size:13px;font-weight:500">Learn More</a>
-
-    <p style="position:relative;z-index:2;font-family:'Avenir'; color:#c2c2c2; font-size:15px; margin-top:55px; font-weight:100;">Ships in under 20 days. <strong>FDA Class 1 Regulated.</strong> 541 devices left in trial.</p>
-    </div>
-    -->
-  </div>
-  <div style="width:1200px; margin:0 auto;background-color:#fff;height:300px; position:relative; margin-top:0px;z-index:0">
-    <center>
-    <div class="nav">
-        <a href="technology/index.html">Technology</a>
-        <a href="manifesto/index.html">Manifesto</a>
-        <a href="data/index.html">Data</a>
-        <a href="fda/index.html">FDA</a>
-        <a href="contact/index.html">Contact Us</a>
-        <a href="trial/index.html" class="rounded">Get Device $99.</a>
-    </div>
-    </center>
-  </div>
+    <footer class="nav">
+      <center class="links">
+        <a href="../technology/index.html">Technology</a>
+        <a href="../manifesto/index.html">Manifesto</a>
+        <a href="../data/index.html">Data</a>
+        <a href="../fda/index.html">FDA</a>
+        <a href="../contact/index.html">Contact Us</a>
+        <a href="../trial/index.html" class="rounded">Get Device $99.</a>
+      </center>
+    </footer>
   </div>
 </body>
 </html>
